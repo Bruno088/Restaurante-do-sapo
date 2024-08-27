@@ -1,0 +1,203 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #4caf50, #2e7d32); /* Degradê verde */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Centraliza o texto dentro da container */
+}
+
+header {
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-align: center; /* Centraliza o título do header */
+    color: white;
+    text-shadow: 2px 2px 4px black; /* Adiciona contorno */
+}
+
+.content {
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center; /* Centraliza o título da content */
+    color: white;
+    text-shadow: 2px 2px 4px black; /* Adiciona contorno */
+}
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center; /* Centraliza o texto da content */
+    color: white;
+    text-shadow: 2px 2px 4px black; /* Adiciona contorno */
+}
+
+footer {
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+    text-align: center; /* Centraliza o texto do footer */
+    color: white;
+    text-shadow: 2px 2px 4px black; /* Adiciona contorno */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 999;
+    border-radius: 5px; /* Adicionando cantos arredondados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adicionando sombra */
+}
+
+.close-popup {
+    background-color: #f44336; /* Vermelho para botão de fechar */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.close-popup:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilos para responsividade e outros elementos... */
+
+/* Centralizando o texto dentro do popup */
+.popup h2, .popup ul, .popup p {
+    text-align: center;
+}
+
+/* Adicionando contorno ao texto do popup */
+.popup h2, .popup ul li, .popup p {
+    color: black;
+    text-shadow: 2px 2px 4px black;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .content h2 {
+        font-size: 1.5em;
+    }
+}.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.sapo-head {
+    width: 60px;
+    height: 40px;
+    background-color: #2e7d32; /* Dark green */
+    border-radius: 50% 50% 0 0; /* Rounded top */
+    position: relative;
+    overflow: hidden; /* Hide eyes if they extend outside */
+}
+
+.sapo-eye {
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+}
+
+.sapo-eye-left {
+    left: 10px;
+}
+
+.sapo-eye-right {
+    left: 45px;
+}
+
+.sapo-mouth {
+    width: 40px;
+    height: 10px;
+    background-color: #2e7d32; /* Dark green */
+    border-radius: 0 0 50% 50%; /* Rounded bottom */
+    margin-top: 5px; /* Add spacing between head and mouth */
+}
+
+.sapo-body {
+    width: 50px;
+    height: 30px;
+    background-color: #4caf50; /* Light green */
+    border-radius: 50% 50% 0 0; /* Rounded top */
+    margin-top: 5px; /* Add spacing between mouth and body */
+}
+
+.sapo-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    margin-top: 10px; /* Add spacing between body and text */
+}
+..logo-container {
+    position: absolute;
+    top: 20px; 
+    right: 20px; /* Position in top-right corner */
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    border-radius: 50%; /* Make the container round */
+    overflow: hidden; /* Hide any image parts that extend beyond the circle */
+}
+.logo-container {
+    position: absolute;
+    top: 20px; 
+    right: 20px; /* Position in top-right corner */
+    width: 100px; /* Initial size for desktop */
+    height: 100px; /* Initial size for desktop */
+    border-radius: 50%; /* Make the container round */
+    overflow: hidden; /* Hide any image parts that extend beyond the circle */
+}
+
+.logo-container img {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; 
+    object-fit: cover; /* Ensure the image covers the entire area */
+    border-radius: 50%; /* Make the image round */
+}
+
+/* For smaller screens (mobile) */
+@media (max-width: 768px) {
+    .logo-container {
+        width: 60px; /* Adjust size for mobile */
+        height: 60px; /* Adjust size for mobile */
+    }
+}
